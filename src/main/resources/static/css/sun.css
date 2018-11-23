@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:  'Lobster', cursive;
+}
+.clock {
+    transform-origin: center bottom;
+    transition: 0.25s;
+}
+svg {
+    position: absolute;
+    width: 800px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #81e2f2;
+    font-size: 14pt;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    transition: 0.25s;
+    overflow: hidden;
+    padding-bottom: 4px;
+}
+a::before, a::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: #81e2f2;
+    transition: 0.25s;
+}
+a::before {
+    top: 0;
+    left: -100%;
+}
+a::after {
+    bottom: 0;
+    right: -100%;
+}
+a:hover {
+    color: #e87e28;
+}
+a:hover:before {
+    transform: translateX(100%);
+}
+a:hover:after {
+    transform: translateX(-100%);
+}
